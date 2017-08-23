@@ -12,15 +12,19 @@
   {% endwith %}
 </div>
 <div class="col-sm-6 col-sm-offset-2">
-  <h1>Artist</h1>
-  <p>{{artist.name}}</p>
-  <p>{{artist.description}}</p>
-	<p>{{artist.user.name}}</p>
-  <p>{{genre.name}}</p>
+  <h1 align="center">{{artist.name}}</h1>
+	<hr>
+	<div class="well">
+		<p>{{artist.description}}</p>
+		{% if artist.user.name %}
+			<p><small><i>Posted by: {{artist.user.name}}</i></small></p>
+		{% endif %}
+	  <small>Genre: <i>{{genre.name}}</i></small>
+	</div>
   <a href="{{url_for('deleteArtist', genre_id = genre.id, artist_id = artist.id)}}"
-     class="btn btn-danger">Delete</a>
+     class="btn btn-danger btn-sm">Delete</a>
   <a href="{{url_for('editArtist', genre_id = genre.id, artist_id = artist.id)}}"
-     class="btn btn-warning">Edit</a>
+     class="btn btn-warning btn-sm">Edit</a>
 </div>
 <div class="col-sm-6">
 

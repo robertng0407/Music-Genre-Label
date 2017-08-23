@@ -1,3 +1,7 @@
-div.flash ul li {
-  text-decoration: none;
+li {
+  list-style: none;
+}
+
+body {
+  font-family: monospace;
 }
