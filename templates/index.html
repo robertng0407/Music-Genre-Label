@@ -1,0 +1,33 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="row">
+  <div class = 'flash'>
+  	{% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          {% if session['username'] %}
+            <li class="alert alert-success fade in"> <strong> {{ message }} </strong> </li>
+          {% else %}
+            <li class="alert alert-danger fade in"> <strong> {{ message }} </strong> </li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+  </div>
+</div>
+<div class="col-sm-6">
+  <h1>Genre</h1>
+  {% for i in genre %}
+    <p><a href="{{url_for('showArtists', genre_id = i.id)}}">{{i.name}}</a></p>
+  {% endfor %}
+</div>
+<div class="col-sm-6">
+  <p><a class="btn btn-primary" href="{{url_for('newArtist')}}">Add New Artist</a></p>
+  <h1>Artists</h1>
+  {% for i in artist %}
+    <p><a href="{{url_for('artist', genre_id = i.genre_id, artist_id = i.id)}}">{{i.name}}</a></p>
+  {% endfor %}
+</div>
+{% endblock %}

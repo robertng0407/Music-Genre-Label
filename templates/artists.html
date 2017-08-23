@@ -1,0 +1,9 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="col-sm-6">
+  <h1>Artists</h1>
+  {% for artist in artists %}
+    <p><a href="{{url_for('artist', genre_id = artist.genre_id, artist_id = artist.id)}}">{{artist.name}}</a></p>
+  {% endfor %}
+</div>
+{% endblock %}
