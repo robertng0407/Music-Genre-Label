@@ -1,5 +1,6 @@
 li {
   list-style: none;
+  max-width: 900px;
 }
 
 body {
@@ -15,5 +16,28 @@ body {
 }
 
 a {
-  color: #f7f7f7;
+  color: #fff;
+}
+
+.gmail-login {
+  border: 2px solid #f7f7f7;
+  max-width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 40px;
+  color: black;
+  margin-top: 80px;
+  background-color: rgba(242,242,242,0.5);
+}
+
+#signInButton {
+  margin-top: 50px;
+}
+
+.list-background {
+  border-radius: 5px;
+  background-color: rgba(242,242,242,0.5);
+  padding: 30px;
 }
