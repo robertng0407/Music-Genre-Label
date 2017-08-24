@@ -21,19 +21,19 @@ a {
 
 .gmail-login {
   border: 2px solid #f7f7f7;
-  max-width: 250px;
-  height: 250px;
+  max-width: 350px;
+  height: 150px;
   border-radius: 5px;
   text-align: center;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 20px;
   color: black;
   margin-top: 80px;
   background-color: rgba(242,242,242,0.5);
 }
 
 #signInButton {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .list-background {
