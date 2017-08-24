@@ -7,3 +7,13 @@ body {
   max-width: 960px;
   margin: 0 auto;
 }
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=0cf30377b382a28e59babe011fe6e79c");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+a {
+  color: #f7f7f7;
+}
