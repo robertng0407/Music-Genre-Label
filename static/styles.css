@@ -39,5 +39,12 @@ a {
 .list-background {
   border-radius: 5px;
   background-color: rgba(242,242,242,0.5);
-  padding: 30px;
+  padding: 10px 30px 10px 30px;
+  height: 580px;
+  overflow-y: auto;
+}
+
+form {
+  max-width: 900px;
+  color: white;
 }

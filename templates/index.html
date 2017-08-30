@@ -17,26 +17,27 @@
     {% endwith %}
   </div>
 </div>
-<div class="col-sm-3 list-background">
-  <h1>Genre</h1>
-  <hr>
-  {% for i in genre %}
-    <p><a href="{{url_for('showArtists', genre_id = i.id)}}">{{i.name}}</a></p>
-  {% endfor %}
-</div>
-<div class="col-sm-1">
-
-</div>
-<div class="col-sm-3">
-  <div class="list-background">
-    <h1>Artists</h1>
-    <hr>
-    {% for i in artist %}
-      <p><a href="{{url_for('artist', genre_id = i.genre_id, artist_id = i.id)}}">{{i.name}}</a></p>
+<div class="row">
+  <div class="col-sm-3 list-background">
+    <h1>Genre</h1>
+    {% for i in genre %}
+      <p><a href="{{url_for('showArtists', genre_id = i.id)}}">{{i.name}}</a></p>
     {% endfor %}
   </div>
+  <div class="col-sm-1">
+
+  </div>
+  <div class="col-sm-3">
+    <div class="list-background">
+      <h1>Artists</h1>
+      {% for i in artist %}
+        <p><a href="{{url_for('artist', genre_id = i.genre_id, artist_id = i.id)}}">{{i.name}}</a></p>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-sm-1">
+    <p><a class="btn btn-primary btn-sm" href="{{url_for('newArtist')}}">Add New Artist</a></p>
+  </div>
 </div>
-<div class="col-sm-1">
-  <p><a class="btn btn-primary btn-sm" href="{{url_for('newArtist')}}">Add New Artist</a></p>
-</div>
+
 {% endblock %}
